@@ -5,6 +5,10 @@ plugins {
 android {
     compileSdkVersion 30
 
+    viewBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.davidglez.newtonraphson"
         minSdkVersion 23
