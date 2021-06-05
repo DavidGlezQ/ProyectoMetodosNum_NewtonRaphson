@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">NewtonRaphson</string>
+    <string name="app_name">Newton Raphson</string>
+    <string name="nr_titulo">Sistema de ecuaciones no lineales por Newton Raphson</string>
+    <string name="nr_ingresar_xy">Ingresa los valores de X y Y</string>
+    <string name="nr_ingresarX">Ingresa X</string>
+    <string name="nr_ingresarY">Ingresa Y</string>
+
 </resources>
