@@ -1,22 +1,36 @@
-package com.davidglez.newtonraphson;
+package com.davidglez.newtonraphson.Fragments;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
-import com.davidglez.newtonraphson.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+import com.davidglez.newtonraphson.MainActivity;
+import com.davidglez.newtonraphson.R;
+import com.davidglez.newtonraphson.databinding.FragmentExampleNewton1ragmentBinding;
 
-    private ActivityMainBinding binding;
+public class ExampleNewton1ragment extends Fragment {
+
+    public FragmentExampleNewton1ragmentBinding binding;
     private String valorX, valorY;
     private Double finalValorX, finalValorY, res1, res2, res3, res4, valorSusFun1, valorSusFun2,
             jacobiInverso1, jacobiInverso2, jacobiInverso3, jacobiInverso4, resSubFinal1, resSubFinal2, primerIteracionX, primerIteracionY;
 
+    public ExampleNewton1ragment() {
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = FragmentExampleNewton1ragmentBinding.inflate(getLayoutInflater());
 
         //Validar funciones
         binding.btnCalcular.setOnClickListener(new View.OnClickListener() {
@@ -136,13 +150,12 @@ public class MainActivity extends AppCompatActivity {
                     String inversaYIteracion3 = String.valueOf(inversaY);
                     binding.tvTerceraInversaY.setText("X: " + inversaYIteracion3);
                 } else {
-                    Toast.makeText(MainActivity.this, "Debes de llenar X y X", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Debes de llenar X y X", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
 
-        View view = binding.getRoot();
-        setContentView(view);
+        return binding.getRoot();
     }
 }
