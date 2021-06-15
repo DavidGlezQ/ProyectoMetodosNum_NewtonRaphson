@@ -4,5 +4,7 @@
     <string name="nr_ingresar_xy">Ingresa los valores de X y Y</string>
     <string name="nr_ingresarX">Ingresa X</string>
     <string name="nr_ingresarY">Ingresa Y</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
